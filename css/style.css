@@ -1,0 +1,111 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #dedede;
+}
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+figure {
+  width: 60%;
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  border: rgb(255, 255, 255) solid;
+  margin-bottom: 5%;
+}
+.grid img {
+  width: 100%;
+}
+figcaption {
+  background-color: white;
+  font-weight: bolder;
+}
+
+.grid {
+  text-align: center;
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+@media all and (min-width: 772px) {
+  .grid {
+    text-align: center;
+    display: grid;
+
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+  }
+
+  .grid img {
+    border-radius: 50%;
+
+    max-width: 1000px;
+    max-height: 350px;
+  }
+  figure {
+    border: rgb(255, 255, 255) solid;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+  }
+  figcaption {
+    background-color: white;
+    font-weight: bolder;
+    width: 36%;
+    margin-top: -29px;
+    border-radius: 40%;
+  }
+  figure:nth-child(9) {
+    grid-column: 1/-1;
+  }
+}
+@media all and (min-width: 998px) {
+  figure:nth-child(3n + 0) {
+    grid-column: 1/-1;
+  }
+  .grid img {
+    border-radius: 0%;
+  }
+  figcaption {
+    width: 100%;
+    border-radius: 0%;
+  }
+  figure {
+    border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion) {
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #928e8e;
+  }
+  figcaption {
+    color: rgb(236, 217, 44);
+    background-color: #222121;
+  }
+  figure {
+    border-color: #222121;
+  }
+}
